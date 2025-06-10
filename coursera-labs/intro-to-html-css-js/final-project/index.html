@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Portfolio</title>
+    <link rel="stylesheet" href="./final.css" />
+  </head>
+  <body class="bg-black">
+    <header class="bungee-spice-regular mt-10 ml-10 text-6xl">
+      <h1>Scott Jones</h1>
+    </header>
+    <nav class="m-auto mr-10 flex justify-end space-x-36 align-middle text-2xl">
+      <a href="#about" class="a-tag">About</a>
+      <a href="#skills" class="a-tag">Skills</a>
+      <a href="#projects" class="a-tag">Projects</a>
+      <a href="#recommendations" class="a-tag">Recommendations</a>
+    </nav>
+    <main class="mt-10 mr-10 ml-10">
+      <section id="about">
+        <div class="flex">
+          <img
+            class="w-60 rounded-4xl"
+            src="img/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
+            alt="Portrait of Scott Jones"
+          />
+          <div class="ml-10 w-1/2">
+            <p class="text-5xl">
+              Hi! <br />
+              I'm Scott,<br />
+              full-stack developer.
+            </p>
+            <p>
+              In sunt aute ex dolore proident mollit ad elit cdivpa. Enim
+              officia Lorem nostrud nisi occaecat. Ut magna labore ad proident
+              aute est adipisicing fugiat cupidatat. Ex in amet cillum
+              incididunt ad cupidatat anim fugiat ad. Ut elit duis minim ex
+              nostrud est veniam pariatur ipsum. Nisi laborum officia non sint
+              velit eu officia est aliqua officia.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="mt-10">
+        <div class="flex items-end justify-center">
+          <img src="img/html-css-js.png" alt="" class="h-32 object-contain" />
+          <img
+            src="img/Laravel.svg.png"
+            alt=""
+            class="ml-6 h-24 object-contain"
+          />
+          <img src="img/vue.png" alt="" class="ml-6 h-22 object-contain" />
+          <img src="img/inertia.svg" alt="" class="ml-6 h-22 object-contain" />
+        </div>
+      </section>
+      <section id="projects" class="mt-10">
+        <h2 class="mb-4 text-4xl font-bold text-purple-600">Projects</h2>
+        <div>
+          <div class="list-disc">
+            <h2 class="project-name">Chatbot</h2>
+            <p class="mx-auto w-[95%]">
+              Developed a secure website integrated with chatbot for an
+              automobile client using HTML, CSS, JavaScript and IBM Watson
+              Assistant.
+            </p>
+          </div>
+          <hr class="list-section-break" />
+          <div class="list-disc">
+            <h2 class="project-name">Sentiment Analyzer</h2>
+            <p class="mx-auto w-[95%]">
+              Developed and deployed a sentiment analyzer for the box reviews
+              section of an eCommerce platform using IBM NLU
+            </p>
+          </div>
+          <hr class="list-section-break" />
+          <div class="list-disc">
+            <h2 class="project-name">Fashion Website</h2>
+            <p class="mx-auto w-[95%]">
+              Created a styled multi-page website for a new player in the
+              fashion industry and integrated it with a shopping card, using
+              stripe for payment gateway
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="recommendations" class="mt-10">
+        <h2 class="mb-4 text-4xl font-bold text-purple-600">
+          What People Are Saying
+        </h2>
+        <div id="recommendation-list">
+          <div class="card">
+            <p class="card-content">
+              &quot;He's the guy you want on your team!&quot;
+            </p>
+          </div>
+          <div class="card">
+            <p class="card-content">
+              &quot;Scott always comes through when I need him most.&quot;
+            </p>
+          </div>
+          <div class="card">
+            <p class="card-content">
+              &quot;Insightful and creative. Scott brings to the table what
+              others are lacking.&quot;
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <form action="" class="flex flex-col posit" onsubmit="return false">
+           
+            <label for="new-recommendation">Share Your Recommendation</label>
+            <textarea
+              name="new-recommendation"
+              id="new-recommendation"
+              cols="100"
+              rows="5"
+              class="rounded bg-amber-50 text-black"
+            ></textarea>       
+            <input
+              id="submit-btn"
+              type="submit"
+              value="Submit"
+              class="mt-2 rounded bg-amber-500 text-black"
+            />
+        </main>
+          </form>
+        </div>
+      </section>
+    <footer class="mt-10 text-center">&#169; Schwame Designs 2025</footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
