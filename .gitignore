@@ -1,6 +1,4 @@
 */node_modules
-<<<<<<< Updated upstream
-=======
 node_modules
-/coursera-labs/coursera-javascript-basics/.gitOLD
->>>>>>> Stashed changes
+.env
+
