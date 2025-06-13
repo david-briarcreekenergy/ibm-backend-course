@@ -11,6 +11,8 @@
     "dev": "concurrently \"nodemon server.js\" \"start http://localhost:3000\""
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "openai": "^5.1.1"
   },

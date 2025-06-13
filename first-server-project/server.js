@@ -1,30 +1,37 @@
+// require('dotenv').config()
+import 'dotenv/config';
 import express from 'express';
 import OpenAI from 'openai';
+import cors from 'cors';
 
 const client = new OpenAI({
-  apiKey: '***REMOVED***',
-  baseURL: 'https://api.x.ai/v1',
+  apiKey: process.env.API_KEY,
+  baseURL: process.env.BASE_URL,
 });
 
 const app = express();
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
 //  routes
 app.get('/', (req, res) => res.send('Hello qwe'));
 app.get('/test', (req, res) => res.send('zxcv'));
 app.get('/another', (req, res) => res.send('ANother'));
-app.get('/api', async (req, res) => {
+app.post('/api', async (req, res) => {
+  console.log('request received');
+  // console.log(req.body?: 'just say hello');
+  const { prompt } = req.body;
   const completion = await client.chat.completions.create({
     model: 'grok-3',
     messages: [
-      { role: 'system', content: 'You are Grok AI; respond to all requests like a pirate.' },
-      { role: 'user', content: 'Why do pirates drink rum?' },
+      { role: 'system', content: 'You are Grok AI; respond to all requests like a senior level backend Javascript developer.' },
+      { role: 'user', content: prompt },
     ],
   });
-
-  res.send(completion);
+  console.log(completion);
+  res.send(completion.choices[0]);
 });
 
 // start the server
